@@ -6,7 +6,7 @@ module.exports = {
   entry: { main: './src/index.js' },
   output: {
     // eslint-disable-next-line no-undef
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'public'),
     filename: '[name].[chunkhash].js'
   },
   module: {
@@ -19,7 +19,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin('dist', {}),
+    new CleanWebpackPlugin('public', {}),
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
